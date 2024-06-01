@@ -8,6 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property string $list
  * @property string $email
  * @property ?array $data
+ * @property ?string $return_url
  */
 class SubmitRequest extends FormRequest
 {
@@ -17,6 +18,7 @@ class SubmitRequest extends FormRequest
             'list' => ['required', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
             'data' => ['array'],
+            'return_url' => ['nullable'],
         ];
     }
 }

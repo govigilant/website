@@ -1,4 +1,16 @@
 <div>
+    <div class="rounded-md mx-auto max-w-7xl bg-green-light p-4 mt-4 -mb-4">
+        <div class="flex">
+            <div class="ml-3 flex-1">
+                <div class="flex justify-between">
+                    <h3 class="text-sm font-medium text-white flex-1">E-mail Confirmed!</h3>
+                </div>
+                <div class="mt-2 text-sm text-base-100">
+                    <p>Thank you for confirming your e-mail address</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="relative isolate pt-8">
         <div class="py-24 sm:py-32 lg:pb-40">
@@ -51,7 +63,7 @@
         </div>
     </div>
 
-    <div class="py-16 sm:py-24">
+    <div class="py-16 sm:py-24" id="subscribe">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div
                 class="relative isolate flex flex-col gap-10 overflow-hidden py-8 xl:flex-row xl:items-center xl:py-16 px-8 rounded-lg bg-base-950">
@@ -64,29 +76,35 @@
                         We will not spam you, and you can unsubscribe any time.
                     </p>
                 </div>
-                <form class="w-full max-w-md" method="POST" action="{{ route:statamic.email-list.submit }}">
-                    <div class="flex gap-x-4">
-                        <input type="hidden" name="list" value="newsletter"/>
-                        {{ csrf_field }}
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required
-                               class="min-w-0 flex-auto rounded-md ring-0 bg-white/5 px-3.5 py-2 text-white sm:text-sm sm:leading-6"
-                               placeholder="Enter your email">
-                        <button type="submit"
-                                class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                            Keep me updated
-                        </button>
-                    </div>
-                    {{ get_errors:all }}
-                        <div class="text-red">
-                            <ul>
-                                {{ messages }}
-                                <li>{{ message }}</li>
-                                {{ /messages }}
-                            </ul>
+
+                {{ if get:email_submitted }}
+                    <p class="text-green-light text-md">Thank your for submitting!<br/>Please confirm your email address</p>
+                {{ else }}
+                    <form class="w-full max-w-md" method="POST" action="{{ route:statamic.email-list.submit }}">
+                        <div class="flex gap-x-4">
+                            <input type="hidden" name="list" value="newsletter"/>
+                            <input type="hidden" name="return_url" value="/?email_submitted=true#subscribe"/>
+                            {{ csrf_field }}
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input id="email-address" name="email" type="email" autocomplete="email" required
+                                   class="min-w-0 flex-auto rounded-md ring-0 bg-white/5 px-3.5 py-2 text-white sm:text-sm sm:leading-6"
+                                   placeholder="Enter your email">
+                            <button type="submit"
+                                    class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                                Keep me updated
+                            </button>
                         </div>
-                    {{ /get_errors:all }}
-                </form>
+                        {{ get_errors:all }}
+                            <div class="text-red">
+                                <ul>
+                                    {{ messages }}
+                                    <li>{{ message }}</li>
+                                    {{ /messages }}
+                                </ul>
+                            </div>
+                        {{ /get_errors:all }}
+                    </form>
+                {{ /if }}
             </div>
         </div>
     </div>

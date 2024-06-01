@@ -16,6 +16,8 @@ class ServiceProvider extends AddonServiceProvider
         'actions' => __DIR__.'/../routes/actions.php',
     ];
 
+    protected $config = '';
+
     /** @phpstan-ignore-next-line */
     protected $vite = [
         'input' => [
@@ -35,12 +37,29 @@ class ServiceProvider extends AddonServiceProvider
         $schedule->command(CleanupUnconfirmedEntriesCommand::class)->daily();
     }
 
+    public function register(): void
+    {
+        parent::register();
+
+        $this->mergeConfigFrom(__DIR__.'/../config/statamic-email-list.php', 'statamic-email-list');
+    }
+
     public function bootAddon(): void
     {
         $this
+            ->bootConfig()
             ->bootMigrations()
             ->bootViews()
             ->bootCpNavigation();
+    }
+
+    protected function bootConfig(): static
+    {
+        $this->publishes([
+            __DIR__.'/../config/core.php' => config_path('core.php'),
+        ], 'config');
+
+        return $this;
     }
 
     protected function bootMigrations(): static
