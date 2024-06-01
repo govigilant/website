@@ -1,0 +1,37 @@
+{
+    "name": "govigilant/statamic-email-list",
+    "autoload": {
+        "psr-4": {
+            "Vigilant\\EmailList\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vigilant\\EmailList\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Email List",
+            "description": "Statamic Email List addon"
+        },
+        "laravel": {
+            "providers": [
+                "Vigilant\\EmailList\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

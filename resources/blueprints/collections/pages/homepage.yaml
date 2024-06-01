@@ -1,0 +1,78 @@
+title: Homepage
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: subtitle
+            field:
+              type: markdown
+              display: Subtitle
+          -
+            handle: getting_started_link
+            field:
+              type: text
+              display: 'Getting Started Link'
+              width: 50
+          -
+            handle: learn_more_link
+            field:
+              type: text
+              display: 'Learn more link'
+              width: 50
+      -
+        display: 'About Text'
+        fields:
+          -
+            handle: about_colored_header
+            field:
+              type: text
+              display: 'Colored Header'
+              width: 50
+          -
+            handle: about_header
+            field:
+              type: text
+              display: Header
+              width: 50
+          -
+            handle: about_left_text
+            field:
+              type: markdown
+              display: 'Left text'
+              width: 50
+          -
+            handle: about_right_text
+            field:
+              type: markdown
+              display: 'Right Text'
+              width: 50
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

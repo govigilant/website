@@ -1,0 +1,144 @@
+{{# {{? $docsUrl = config('services.vigilant.docs_url') ?}} #}}
+{{# {{? $appUrl = config('services.vigilant.app_url') ?}} #}}
+<header class="bg-black z-40" x-data="{ sideMenu: false }">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="/" class="-m-1.5 p-0.5">
+                <span class="sr-only">Vigilant</span>
+                <img class="h-14 w-auto" src="/img/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    x-on:click="sideMenu = true">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6 text-red" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <div class="relative" x-data="{ productMenu: false }">
+                <button type="button" class="flex items-center gap-x-1 text-md font-semibold leading-6 text-base-100"
+                        aria-expanded="false"
+                        x-on:click="productMenu = !productMenu">
+                    Product
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                         aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div
+                    class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+                    x-on:click.away="productMenu = false"
+                    x-cloak
+                    x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 translate-y-1"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-150"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-1"
+                    x-show="productMenu">
+                    <div class="p-4">
+                        {{ collection:features show_in_menu:is="true" status:in="published" }}
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div
+                                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <span class="h-6 w-6 text-gray-600 group-hover:text-red">
+                                        {{ icon }}
+                                    </span>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="/feature/{{ slug }}" class="block font-semibold text-gray-900">
+                                        {{ title }}
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">{{ short_description }}</p>
+                                </div>
+                            </div>
+                        {{ /collection:features }}
+                        <div class="w-full">
+                            <a href="/features"
+                               class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 rounded-lg">
+                                All Features
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <a href="{{ $docsUrl }}" class="text-md font-semibold leading-6 text-base-200">Documentation</a>
+            <a href="/articles" class="text-md font-semibold leading-6 text-base-200">Blog</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="{{ $appUrl }}" class="text-sm font-semibold leading-6 text-white">Log in <span
+                aria-hidden="true">&rarr;</span></a>
+        </div>
+    </nav>
+    <div class="lg:hidden" role="dialog" aria-modal="true" x-show="sideMenu" x-cloak>
+        <div class="fixed inset-0 z-10"></div>
+        <div
+            x-on:click.away="sideMenu = false"
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-base-900">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Vigilant</span>
+                    <img class="h-12 w-auto" src="/img/logo.svg"
+                         alt="">
+                </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" x-on:click="sideMenu = false">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor"
+                         aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <div class="-mx-3" x-data="{ productSubmenu: false }">
+                            <button type="button"
+                                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-base-100 hover:bg-base-950"
+                                    x-on:click="productSubmenu = !productSubmenu"
+                                    aria-controls="product" aria-expanded="false">
+                                Product
+                                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor"
+                                     :class="productSubmenu ? 'rotate-180' : ''"
+                                     aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div class="mt-2 space-y-2" id="product" x-show="productSubmenu">
+                                {{ collection:features show_in_menu:is="true" status:in="published" }}
+                                    <a href="/feature/{{ slug }}"
+                                       class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-base-100 hover:bg-base-950">{{ title }}</a>
+                                {{ /collection:features }}
+                                    <a href="/features"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-base-100 hover:bg-base-950">All Features</a>
+                            </div>
+                        </div>
+                        <a href="{{ $docsUrl }}"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-base-100 hover:bg-base-950">Documentation</a>
+                        <a href="/articles"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-base-100 hover:bg-base-950">Blog</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="{{ $appUrl }}"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-base-50 hover:bg-base-950">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
