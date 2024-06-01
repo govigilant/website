@@ -5,4 +5,4 @@ php8.3 artisan optimize:clear
 php8.3 artisan migrate --force
 php8.3 artisan optimize
 npm i
-npm run prod
+npm run build
