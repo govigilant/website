@@ -22,8 +22,14 @@ class MailListController extends Controller
 
         EntrySubmitted::dispatch($entry);
 
+        if (! blank($request->return_url)) {
+            return redirect()->to($request->return_url)->with([
+                'email_submitted' => true,
+            ]);
+        }
+
         return redirect()->back()->with([
-            'submitted' => true,
+            'email_submitted' => true,
         ]);
     }
 
@@ -33,6 +39,6 @@ class MailListController extends Controller
             'confirmed' => true,
         ]);
 
-        return redirect()->to('/')->with('emailConfirmed', true);
+        return redirect()->to(config('statamic-email-list.confirmation_url'));
     }
 }
