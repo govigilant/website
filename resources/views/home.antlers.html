@@ -1,16 +1,18 @@
 <div>
-    <div class="rounded-md mx-auto max-w-7xl bg-green-light p-4 mt-4 -mb-4">
-        <div class="flex">
-            <div class="ml-3 flex-1">
-                <div class="flex justify-between">
-                    <h3 class="text-sm font-medium text-white flex-1">E-mail Confirmed!</h3>
-                </div>
-                <div class="mt-2 text-sm text-base-100">
-                    <p>Thank you for confirming your e-mail address</p>
+    {{ if get:email_confirmed }}
+        <div class="rounded-md mx-auto max-w-7xl bg-green-light p-4 mt-4 -mb-4">
+            <div class="flex">
+                <div class="ml-3 flex-1">
+                    <div class="flex justify-between">
+                        <h3 class="text-sm font-medium text-white flex-1">E-mail Confirmed!</h3>
+                    </div>
+                    <div class="mt-2 text-sm text-base-100">
+                        <p>Thank you for confirming your e-mail address</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {{ /if }}
 
     <div class="relative isolate pt-8">
         <div class="py-24 sm:py-32 lg:pb-40">
@@ -78,7 +80,8 @@
                 </div>
 
                 {{ if get:email_submitted }}
-                    <p class="text-green-light text-md">Thank your for submitting!<br/>Please confirm your email address</p>
+                    <p class="text-green-light text-md">Thank your for submitting!<br/>Please confirm your email address
+                    </p>
                 {{ else }}
                     <form class="w-full max-w-md" method="POST" action="{{ route:statamic.email-list.submit }}">
                         <div class="flex gap-x-4">
