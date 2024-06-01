@@ -36,4 +36,5 @@ return [
         'docs_url' => env('VIGILANT_DOCS_URL', '#')
     ],
 
+    'deploy_key' => env('DEPLOY_KEY'),
 ];
