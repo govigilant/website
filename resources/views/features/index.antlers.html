@@ -1,0 +1,31 @@
+<div class="py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto  lg:mx-0">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ $title }}</h2>
+            <div class="mt-6 text-lg leading-8 text-base-100">
+                {{ content }}
+            </div>
+            <p class="mt-1 text-lg leading-8 text-red-light">
+                Note: Vigilant is still in development, the list of features is incomplete.
+            </p>
+        </div>
+
+        <section class="mt-24">
+            <dl class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+                {{ collection:features status:in="published" }}
+                    <div class="relative pl-9">
+                        <dt class="inline font-semibold text-white">
+                          <span class="absolute left-1 top-1 h-5 w-5 text-white">
+                              {{ icon }}
+                          </span>
+                            {{ title }}
+                        </dt>
+                        <br/>
+                        <dd class="inline">{{ short_description }}</dd>
+                    </div>
+                {{ /collection:features }}
+            </dl>
+        </section>
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+title: Feature
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              width: 75
+          -
+            handle: icon
+            field:
+              directory: content/icons
+              type: icon
+              display: Icon
+              width: 25
+          -
+            handle: short_description
+            field:
+              type: textarea
+              display: 'Short description'
+          -
+            handle: description
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Description
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: show_on_homepage
+            field:
+              type: toggle
+              display: 'Show on homepage'
+          -
+            handle: show_in_menu
+            field:
+              type: toggle
+              display: 'Show in menu'
+          -
+            handle: planned
+            field:
+              type: toggle
+              display: Planned
