@@ -33,7 +33,6 @@ return [
 
     'vigilant' => [
         'app_url' => env('VIGILANT_APP_URL', '#'),
-        'docs_url' => env('VIGILANT_DOCS_URL', '#')
     ],
 
     'deploy_key' => env('DEPLOY_KEY'),

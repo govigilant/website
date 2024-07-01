@@ -1,0 +1,19 @@
+<div class="px-6 py-24 lg:px-8">
+    <div class="max-w-7xl mx-auto flex gap-20">
+        <div>
+            <h3 class="text-base-400 mb-2 text-md">Documentation</h3>
+            <ul class="space-y-1">
+                {{ nav:documentation }}
+                    <li><a {{ if is_current || is_parent }} class="text-md text-red-light" {{ /if }} href="{{ url }}">{{ title }}</a></li>
+                {{ /nav:documentation }}
+            </ul>
+        </div>
+        <div class="flex-1 text-base leading-7 text-gray-700">
+            <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-7xl">{{ title }}</h1>
+            <div class="mt-10 text-lg max-w-2xl text-base-200 prose">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+</div>
