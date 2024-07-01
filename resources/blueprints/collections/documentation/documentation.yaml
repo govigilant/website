@@ -1,0 +1,66 @@
+title: Documentation
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h1
+                - h4
+                - h5
+                - h6
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              remove_empty_nodes: true
+              antlers: true
+              type: bard
+              display: content
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true

@@ -24,4 +24,8 @@
     a {
         @apply text-red;
     }
+
+    code {
+        @apply text-red;
+    }
 }
