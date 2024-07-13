@@ -14,7 +14,8 @@
         "laravel/framework": "^11",
         "laravel/tinker": "^2.9",
         "statamic/cms": "^5.0",
-        "statamic/eloquent-driver": "^4.0"
+        "statamic/eloquent-driver": "^4.0",
+        "vincentbean/laravel-plausible": "^2.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",
