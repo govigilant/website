@@ -4,7 +4,8 @@ blueprint: documentation
 title: 'Self-Hosted Deployment'
 template: documentation/show
 updated_by: 1
-updated_at: 1719942962
+updated_at: 1721679248
+type: hosting
 content:
   -
     type: paragraph
