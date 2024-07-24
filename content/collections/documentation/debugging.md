@@ -1,10 +1,11 @@
 ---
 id: 6b9d443b-81cd-4161-9fc7-df698dbfcab6
 blueprint: documentation
-title: Debugging
+title: Troubleshooting
 template: documentation/show
 updated_by: 1
-updated_at: 1719853396
+updated_at: 1721848617
+type: hosting
 content:
   -
     type: paragraph
@@ -21,7 +22,7 @@ content:
     content:
       -
         type: text
-        text: 'If you encounter an error it would greatly be appreciated if you post it to the '
+        text: 'If you encounter an issue it would greatly be appreciated if you post it to the '
       -
         type: text
         marks:
@@ -40,7 +41,7 @@ content:
     type: heading
     attrs:
       textAlign: left
-      level: 2
+      level: 3
     content:
       -
         type: text
@@ -66,7 +67,7 @@ content:
     type: heading
     attrs:
       textAlign: left
-      level: 2
+      level: 3
     content:
       -
         type: text
