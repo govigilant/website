@@ -3,7 +3,7 @@ id: 3ece91d4-a493-46b4-92bb-fa8a784aa1f0
 blueprint: documentation
 title: Vigilant
 updated_by: 1
-updated_at: 1721848164
+updated_at: 1722070604
 content:
   -
     type: paragraph
@@ -12,7 +12,7 @@ content:
     content:
       -
         type: text
-        text: "Welcome to Vigilant's documentation."
+        text: "Welcome to Vigilant's documentation. Vigilant is an open source technical monitoring application for websites and web applications. It will monitor different aspects of your website and notify if anything changes. These monitors and notifications are fully customizable. "
   -
     type: paragraph
     attrs:
