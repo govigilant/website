@@ -4,7 +4,7 @@ blueprint: documentation
 title: Troubleshooting
 template: documentation/show
 updated_by: 1
-updated_at: 1721848617
+updated_at: 1722157907
 type: hosting
 content:
   -
@@ -37,6 +37,43 @@ content:
       -
         type: text
         text: .
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 3
+    content:
+      -
+        type: text
+        text: Docker
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+    content:
+      -
+        type: text
+        text: 'First of all confirm that the containers are running and are healthy using '
+      -
+        type: text
+        marks:
+          -
+            type: code
+        text: 'docker ps'
+      -
+        type: text
+        text: '. '
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'If you see any issues go to the folder where the compose file is located and examine the logs: '
+      -
+        type: text
+        marks:
+          -
+            type: code
+        text: 'docker compose logs -f'
   -
     type: heading
     attrs:
