@@ -5,7 +5,8 @@ title: 'It is now possible to self-host Vigilant!'
 introduction: "The past few months I've worked on getting Vigilant stable and self-hostable. The application now has three monitoring features and is ready to be self hosted using Docker. This means that everyone can start playing with Vigilant!"
 author: 1
 updated_by: 1
-updated_at: 1724441770
+updated_at: 1724441852
+published_at: '2024-08-23'
 content:
   -
     type: paragraph
