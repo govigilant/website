@@ -3,7 +3,7 @@ id: 1391eb4f-4839-44b0-ad64-b4ebd32985cd
 blueprint: documentation
 title: 'Getting started'
 updated_by: 1
-updated_at: 1722102603
+updated_at: 1724444339
 content:
   -
     type: paragraph
@@ -57,4 +57,35 @@ content:
       -
         type: text
         text: " When you've setup the application you can access it through port 8000 (or any other port you've configured) and you will be welcomed by a registration screen. After registering you're able to add your website and configure the monitors."
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 2
+    content:
+      -
+        type: text
+        text: 'Questions?'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+    content:
+      -
+        type: text
+        text: 'Join the '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://discord.gg/MG3aV8uFt5'
+              rel: null
+              target: null
+              title: null
+        text: Discord
+      -
+        type: text
+        text: '!'
 ---

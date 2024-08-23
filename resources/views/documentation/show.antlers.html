@@ -1,6 +1,6 @@
 <div class="grid grid-cols-6 space-x-12 mt-4">
-    <div class="col-span-2 flex justify-end bg-base-950 rounded-tr rounded-br pr-12 py-8">
-        <ul class="space-y-3">
+    <div class="col-span-2 flex justify-end rounded-tr rounded-br">
+        <ul class="space-y-3 bg-base-950 rounded-md px-12 py-8">
             {{ nav:documentation }}
                 <li class="mb-4">
                     {{ if children }}
@@ -23,6 +23,18 @@
     </div>
     <div class="col-span-4 text-base leading-7 text-gray-700">
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ title }}</h1>
+        <div class="rounded-md bg-blue p-4  max-w-2xl mt-6">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3 flex-1 md:flex md:justify-between">
+                    <p class="text-sm text-white">Vigilant is in early development. Not all features are implemented and there are probably a few bugs. Feedback is greatly appreciated!</p>
+                </div>
+            </div>
+        </div>
         <div class="mt-10 text-sm max-w-2xl text-base-200 prose">
             {{ content }}
         </div>

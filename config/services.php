@@ -33,6 +33,7 @@ return [
 
     'vigilant' => [
         'app_url' => env('VIGILANT_APP_URL', '#'),
+        'discord_url' => 'https://discord.gg/MG3aV8uFt5',
     ],
 
     'deploy_key' => env('DEPLOY_KEY'),
