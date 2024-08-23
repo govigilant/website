@@ -5,7 +5,8 @@ title: 'DNS Monitoring'
 icon: list-unordered
 short_description: 'Get notified when DNS records change'
 show_on_homepage: true
-planned: true
+planned: false
 updated_by: 1
-updated_at: 1716959900
+updated_at: 1724444378
+show_in_menu: false
 ---
