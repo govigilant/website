@@ -20,9 +20,26 @@ tabs:
           -
             handle: content
             field:
-              type: markdown
+              type: bard
               display: Content
               localizable: true
+              remove_empty_nodes: false
+              sets:
+                sets:
+                  display: Sets
+                  sets:
+                    full_width_image:
+                      display: 'Full width image'
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            min_files: 1
+                            container: assets
+                            type: assets
+                            display: image
   sidebar:
     display: Sidebar
     sections:
