@@ -9,7 +9,7 @@
                 You can ready about my journey and learnings on this blog.
             </p>
             <div class="mt-10 space-y-16 border-t border-base-300 pt-10 sm:mt-16 sm:pt-16">
-                {{ collection:articles status:in="published" }}
+                {{ collection:articles status:in="published" sort="published_at:desc" }}
                     <article class="flex max-w-xl flex-col items-start justify-between">
                         <div class="flex items-center gap-x-4 text-xs text-base-300">
                             <time datetime="{{ published_at|format('Y-m-d') }}" class="text-gray-500">{{ published_at|format('F d, Y') }}</time>

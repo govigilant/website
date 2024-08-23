@@ -9,6 +9,14 @@
         <div class="mt-6 text-xl leading-8 text-base-200">{{ introduction }}</div>
         <div class="mt-10 text-lg max-w-2xl text-base-200 prose">
             {{ content }}
+            {{ if type == "text" }}
+                <div class="text">
+                    {{ text }}
+                </div>
+            {{ elseif type == "full_width_image" }}
+                <img src="{{ image:url }}" alt="{{ image:alt }}"/>
+            {{ /if }}
+            {{ /content }}
         </div>
     </div>
 </div>
