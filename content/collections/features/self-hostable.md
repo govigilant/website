@@ -5,9 +5,11 @@ title: 'Self Hostable'
 short_description: 'Deploy Vigilant on your own servers for total control over your data.'
 show_on_homepage: true
 updated_by: 1
-updated_at: 1717089728
+updated_at: 1724786170
 icon: servers
-description:
+planned: false
+show_in_menu: true
+content:
   -
     type: paragraph
     content:
@@ -34,6 +36,17 @@ description:
       -
         type: text
         text: 'Using Docker you can quickly setup Vigilant and try it for yourself. '
-planned: false
-show_in_menu: true
+      -
+        type: hardBreak
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'statamic://entry::1e96f1a9-d3a2-45f7-8007-de1bf6173957'
+              rel: null
+              target: null
+              title: null
+        text: 'Head over to the docs to get started!'
 ---

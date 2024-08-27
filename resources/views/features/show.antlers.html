@@ -1,10 +1,40 @@
 <div class="px-6 py-24 lg:px-8">
-    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <span class="text-red text-lg">Feature</span>
-        <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-7xl">{{ title }}</h1>
-        <div class="mt-6 text-xl leading-8 text-base-200">{{ short_description }}</div>
-        <div class="mt-10 text-lg max-w-2xl text-base-200 prose">
-            {{ description }}
+    <div class="mx-auto max-w-7xl text-base leading-7 text-gray-700">
+        <div class="grid grid-cols-3">
+            <div class="col-span-2">
+                <span class="text-red text-lg">Feature</span>
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-7xl">{{ title }}</h1>
+                <div class="mt-6 text-xl leading-8 text-base-200">{{ short_description }}</div>
+            </div>
+            <div class="flex justify-end pr-8" x-data="{ anim: true }" x-init="setTimeout(() => anim = false, 2000)" :class="anim ? 'animate-pulse' : ''">
+                {{ icon | replace('<svg', '<svg class="h-24 w-24 text-red rotate-12"') }}
+            </div>
+        </div>
+
+        <div class="mt-10 text-lg max-w-7xl text-base-200 prose lg:prose-2xl space-y-8">
+            {{ content }}
+            {{ if type == "text" }}
+                <div class="text-xm text-base-200 prose">
+                    {{ text }}
+                </div>
+            {{ elseif type == "text_with_right_image" }}
+                <div class="flex justify-between space-x-8">
+                    <div class="text-md text-base-200 prose">{{ text }}</div>
+                    <div class="relative mt-0 flex-shrink-0 max-w-xl not-prose">
+                        <div class="absolute inset-0 bg-red-light blur-lg opacity-50 z-0"></div>
+                        <img class="object-contain w-full z-10 relative rounded-lg" src="{{ image:url }}" alt="{{ image:alt }}"/>
+                    </div>
+                </div>
+            {{ elseif type == "text_with_left_image" }}
+                <div class="flex justify-between space-x-8">
+                    <div class="relative mt-0 flex-shrink-0 max-w-xl not-prose">
+                        <div class="absolute inset-0 bg-red blur-lg opacity-50 z-0"></div>
+                        <img class="object-contain w-full z-10 relative rounded-lg" src="{{ image:url }}" alt="{{ image:alt }}"/>
+                    </div>
+                    <div class="mt-0 flex-shrink-0 max-w-xl object-contain">{{ text }}</div>
+                </div>
+            {{ /if }}
+            {{ /content }}
         </div>
     </div>
 </div>
