@@ -31,6 +31,57 @@ tabs:
               remove_empty_nodes: false
               type: bard
               display: Description
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              sets:
+                image_sets:
+                  display: 'Image Sets'
+                  icon: media-image-picture-orientation
+                  sets:
+                    text_with_left_image:
+                      display: 'Text with left image'
+                      icon: text-formatting-wrap-image-left
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            min_files: 1
+                            container: assets
+                            type: assets
+                            display: Image
+                            width: 50
+                        -
+                          handle: text
+                          field:
+                            remove_empty_nodes: false
+                            type: bard
+                            display: text
+                            width: 50
+                    text_with_right_image:
+                      display: 'Text with right image'
+                      icon: text-formatting-wrap-image-right
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Text
+                            width: 50
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: Image
+                            width: 50
+                            max_files: 1
+                            min_files: 1
   sidebar:
     display: Sidebar
     sections:

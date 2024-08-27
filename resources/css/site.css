@@ -36,4 +36,8 @@
     :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
         content: '';
     }
+
+    strong {
+        @apply text-base-200 text-lg font-bold;
+    }
 }
