@@ -26,12 +26,6 @@ tabs:
               type: textarea
               display: 'Short description'
           -
-            handle: description
-            field:
-              remove_empty_nodes: false
-              type: bard
-              display: Description
-          -
             handle: content
             field:
               remove_empty_nodes: false
