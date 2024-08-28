@@ -4,7 +4,7 @@ blueprint: documentation
 title: Troubleshooting
 template: documentation/show
 updated_by: 1
-updated_at: 1722157907
+updated_at: 1724871049
 type: hosting
 content:
   -
@@ -34,6 +34,20 @@ content:
               target: null
               title: null
         text: 'GitHub issues'
+      -
+        type: text
+        text: ' or the '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://discord.gg/MG3aV8uFt5'
+              rel: null
+              target: null
+              title: null
+        text: Discord
       -
         type: text
         text: .
