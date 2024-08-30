@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <a href="/articles" class="text-red-light">All Articles</a>
         <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-7xl">{{ title }}</h1>
-        <div class="text-base-500">
+        <div class="text-base-500 mt-2">
             <time datetime="{{ published_at | format('Y-m-d') }}">{{ published_at|format('F d, Y') }}</time>
             <span>&middot; Written by {{ author.name }}</span>
         </div>
