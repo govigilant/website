@@ -8,7 +8,7 @@ introduction: |-
   When any of these monitors detect a change it will notify you through a flexible notification system.
 author: 1
 updated_by: 1
-updated_at: 1724342868
+updated_at: 1725297380
 published_at: '2024-05-20'
 content:
   -
@@ -170,12 +170,41 @@ content:
     content:
       -
         type: text
+        text: 'DNS changes can be catastrophic, this is why I think that it is a good idea to monitor them and get notified of changes. Even if you applied the change itself, I think a notification would be good.'
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: HTTPS
+  -
+    type: paragraph
+    content:
+      -
+        type: text
         text: |-
-          DNS changes can be catastrophic, this is why I think that it is a good idea to monitor them and get notified of changes. Even if you applied the change itself, I think a notification would be good.### HTTPSAll sites should run on HTTPS, the monitoring would check the following:
+          All sites should run on HTTPS, the monitoring would check the following:
           - Expiry of the certificate
           - Expiry of the root certificate
           - Certificate changes
-          - Domain equals the one on the certificate### Other featuresThere are a few other features that I've not worked out but may like to add:- Cron monitoring
+          - Domain equals the one on the certificate
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: 'Other features'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: |-
+          There are a few other features that I've not worked out but may like to add:- Cron monitoring
           - Web Vitals
           - Response times for specific URL's
           - Mixed Content
