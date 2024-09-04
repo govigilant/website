@@ -11,6 +11,7 @@
     "require": {
         "php": "^8.2",
         "govigilant/statamic-email-list": "dev-main",
+        "govigilant/statamic-gpt-spell-corrector": "^1.0",
         "laravel/framework": "^11",
         "laravel/tinker": "^2.9",
         "statamic/cms": "^5.0",
