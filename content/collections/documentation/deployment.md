@@ -4,7 +4,7 @@ blueprint: documentation
 title: 'Self-Hosted Deployment'
 template: documentation/show
 updated_by: 1
-updated_at: 1721679248
+updated_at: 1725698889
 type: hosting
 content:
   -
@@ -35,7 +35,7 @@ content:
               app:
                   image: ghcr.io/govigilant/vigilant:latest
                   volumes:
-                      - .env.docker:/app/.env
+                      - .env:/app/.env
                       - ./storage:/app/storage
                       - public:/app/public
                   restart: always
