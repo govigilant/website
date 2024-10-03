@@ -6,9 +6,10 @@ icon: message
 short_description: 'Armed with a powerful notification system that can be tweaked to send notifications exactly when and where you need them.'
 show_on_homepage: true
 updated_by: 1
-updated_at: 1727974481
+updated_at: 1727985238
 planned: false
 show_in_menu: true
+homepage_hero: true
 content:
   -
     type: paragraph

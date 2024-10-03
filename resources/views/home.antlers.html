@@ -15,7 +15,7 @@
     {{ /if }}
 
     <div class="relative isolate pt-8">
-        <div class="py-24 sm:py-32 lg:pb-40">
+        <div class="py-16 sm:py-24 lg:pb-40">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl text-center font-text">
                     <span class="border border-base-200 rounded-md px-2 py-0.5 text-base-200 font-text">Under Development</span>
@@ -30,9 +30,24 @@
                                 aria-hidden="true">→</span></a>
                     </div>
                 </div>
+
+                <div class="mt-16 max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+                    {{ collection:features homepage_hero:is="true" status:in="published" limit="4" }}
+                        <div class="w-full border-l border-red pl-3 font-text relative group">
+                            <a href="/feature/{{ slug }}" class="absolute inset-0 z-10"></a>
+                            <h3 class="font-header text-lg text-white group-hover:text-base-100">{{ title }}</h3>
+                            <p class="text-sm">{{ short_description }}</p>
+                        </div>
+                    {{ /collection:features }}
+                </div>
+                <div class="mt-4 flex justify-end">
+                    <a href="/features" class="font-header text-red text-md"> View All Features <span aria-hidden="true">→</span></a>
+                </div>
+
                 <img src="/screenshot.png"
                      alt="App screenshot" width="2432" height="1442"
-                     class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24">
+                     class="mt-12 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-16">
             </div>
         </div>
         <div

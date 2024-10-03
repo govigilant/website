@@ -5,10 +5,11 @@ title: 'Lighthouse Monitoring'
 short_description: 'Automatically run lighthouse tests and get notified when scores change'
 show_on_homepage: true
 updated_by: 1
-updated_at: 1727808299
+updated_at: 1727985245
 icon: lighthouse
 planned: false
 show_in_menu: true
+homepage_hero: true
 content:
   -
     type: paragraph
