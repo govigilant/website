@@ -4,25 +4,25 @@
             {{ nav:documentation }}
                 <li class="mb-4">
                     {{ if children }}
-                        <p class="font-bold text-lg mb-2">{{ title }}</p>
+                        <p class="font-bold text-lg mb-2 font-header">{{ title }}</p>
                         <ul class="space-y-1">
                             {{ children }}
                             <li class="text-md{{ if is_current }} font-bold text-red-light {{ /if }}">
                                 <a class="text-md
-                                    {{ if is_current }} text-red-light {{ /if }}" href="{{ url }}">{{ title }}</a>
+                                    {{ if is_current }} text-red-light font-header {{ /if }}" href="{{ url }}">{{ title }}</a>
                             </li>
                             {{ /children }}
                         </ul>
                     {{ else }}
                         <a class="text-md
-                            {{ if is_current }} text-red-light {{ /if }}" href="{{ url }}">{{ title }}</a>
+                            {{ if is_current }} text-red-light font-header {{ /if }}" href="{{ url }}">{{ title }}</a>
                     {{ /if }}
                 </li>
             {{ /nav:documentation }}
         </ul>
     </div>
-    <div class="col-span-4 text-base leading-7 text-gray-700">
-        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ title }}</h1>
+    <div class="col-span-4 text-base leading-7 text-gray-700 font-text">
+        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl font-header">{{ title }}</h1>
         <div class="rounded-md bg-blue p-4  max-w-2xl mt-6">
             <div class="flex">
                 <div class="flex-shrink-0">
