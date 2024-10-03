@@ -112,3 +112,9 @@ tabs:
             field:
               type: toggle
               display: Planned
+          -
+            handle: homepage_hero
+            field:
+              type: toggle
+              display: 'Homepage Hero'
+              instructions: 'Show in homepage hero'

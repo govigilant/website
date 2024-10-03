@@ -8,7 +8,8 @@ show_on_homepage: true
 show_in_menu: true
 planned: false
 updated_by: 1
-updated_at: 1727974969
+updated_at: 1727985243
+homepage_hero: true
 content:
   -
     type: paragraph
