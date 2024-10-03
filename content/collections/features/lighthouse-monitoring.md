@@ -5,7 +5,7 @@ title: 'Lighthouse Monitoring'
 short_description: 'Automatically run lighthouse tests and get notified when scores change'
 show_on_homepage: true
 updated_by: 1
-updated_at: 1724697397
+updated_at: 1727808299
 icon: lighthouse
 planned: false
 show_in_menu: true
@@ -24,14 +24,6 @@ content:
         type: text_with_right_image
         text:
           -
-            type: heading
-            attrs:
-              level: 2
-            content:
-              -
-                type: text
-                text: 'Track Your Scores'
-          -
             type: paragraph
             content:
               -
@@ -44,6 +36,7 @@ content:
                 type: text
                 text: "This way you can instantly see when you've improved."
         image: lighthouse-1.png
+        heading: 'Track Your Scores'
   -
     type: set
     attrs:
@@ -53,19 +46,12 @@ content:
         image: lighthouse-monitoring-2.png
         text:
           -
-            type: heading
-            attrs:
-              level: 2
-            content:
-              -
-                type: text
-                text: 'Historic Statistics'
-          -
             type: paragraph
             content:
               -
                 type: text
                 text: 'Track the most important Lighthouse statistics over time to quickly see what is happening.'
+        heading: 'Historical Statistics'
   -
     type: paragraph
 ---

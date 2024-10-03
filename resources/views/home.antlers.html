@@ -4,9 +4,9 @@
             <div class="flex">
                 <div class="ml-3 flex-1">
                     <div class="flex justify-between">
-                        <h3 class="text-sm font-medium text-white flex-1">E-mail Confirmed!</h3>
+                        <h3 class="text-sm font-medium text-white flex-1 font-header">E-mail Confirmed!</h3>
                     </div>
-                    <div class="mt-2 text-sm text-base-100">
+                    <div class="mt-2 text-sm text-base-100 font-text">
                         <p>Thank you for confirming your e-mail address</p>
                     </div>
                 </div>
@@ -17,10 +17,10 @@
     <div class="relative isolate pt-8">
         <div class="py-24 sm:py-32 lg:pb-40">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto max-w-2xl text-center">
-                    <span class="border border-base-200 rounded-md px-2 py-0.5 text-base-200">Under Development</span>
-                    <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ title }}</h1>
-                    <div class="mt-6 text-lg leading-8 text-gray-100">{{ subtitle }}</div>
+                <div class="mx-auto max-w-2xl text-center font-text">
+                    <span class="border border-base-200 rounded-md px-2 py-0.5 text-base-200 font-text">Under Development</span>
+                    <h1 class="mt-2 text-4xl tracking-tight text-white sm:text-6xl font-header">{{ title }}</h1>
+                    <div class="mt-6 text-lg leading-8 text-gray-100 font-text">{{ subtitle }}</div>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="{{ getting_started_link }}"
                            class="rounded-full bg-red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red">Get
@@ -44,10 +44,10 @@
         </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 font-text">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <p class="text-base font-semibold leading-7 text-red">{{ about_colored_header }}</p>
-            <h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ about_header }}</h2>
+            <p class="text-base font-semibold leading-7 text-red font-header">{{ about_colored_header }}</p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl font-header">{{ about_header }}</h2>
             <div
                 class="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-base-100 lg:max-w-none lg:grid-cols-2">
                 <div class="flex flex-col gap-8">
@@ -65,12 +65,12 @@
         </div>
     </div>
 
-    <div class="py-16 sm:py-24" id="subscribe">
+    <div class="py-16 sm:py-24 font-text" id="subscribe">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div
                 class="relative isolate flex flex-col gap-10 overflow-hidden py-8 xl:flex-row xl:items-center xl:py-16 px-8 rounded-lg bg-base-950">
                 <div class="max-w-2xl xl:max-w-none xl:flex-auto">
-                    <h2 class=" text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    <h2 class=" text-3xl font-bold tracking-tight text-white sm:text-4xl font-header">
                         Stay <span class="text-red">Updated</span>
                     </h2>
                     <p class="text-md mt-1 text-gray-200">
@@ -112,12 +112,12 @@
         </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-6 lg:px-8 pb-6 md:pb-12">
-        <h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Features</h2>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 pb-6 md:pb-12 font-text">
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl font-header">Features</h2>
         <dl class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
             {{ collection:features show_on_homepage:is="true" status:in="published" }}
                 <div class="relative pl-9">
-                    <dt class="inline font-semibold text-white">
+                    <dt class="inline font-semibold text-white font-header">
                         <span class="absolute left-1 top-1 h-5 w-5 text-white">
                             {{ icon }}
                         </span>

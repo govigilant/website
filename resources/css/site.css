@@ -2,7 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-[x-cloak] { display: none !important; }
+[x-cloak] {
+    display: none !important;
+}
 
 .prose {
     h1 {
@@ -40,4 +42,18 @@
     strong {
         @apply text-base-200 text-lg font-bold;
     }
+}
+
+.font-header {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-text {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }

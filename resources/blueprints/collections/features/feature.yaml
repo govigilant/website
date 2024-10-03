@@ -41,6 +41,11 @@ tabs:
                       icon: text-formatting-wrap-image-left
                       fields:
                         -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
                           handle: image
                           field:
                             max_files: 1
@@ -60,6 +65,11 @@ tabs:
                       display: 'Text with right image'
                       icon: text-formatting-wrap-image-right
                       fields:
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
                         -
                           handle: text
                           field:
