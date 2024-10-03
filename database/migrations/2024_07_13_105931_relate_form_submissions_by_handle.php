@@ -9,6 +9,10 @@ use Statamic\Eloquent\Forms\SubmissionModel;
 return new class extends Migration {
     public function up()
     {
+        if (!Schema::hasTable($this->prefix('form_submissions'))) {
+            return;
+        }
+
         Schema::table($this->prefix('form_submissions'), function (Blueprint $table) {
             $table->string('form', 30)->nullable()->index()->after('id');
         });
